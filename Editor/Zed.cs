@@ -37,7 +37,22 @@ namespace UnityZedIntegration
         {
             const string defaultSettings = @"{
             ""file_scan_exclusions"": [
-                ""**/.*"",
+                // Zed's default exclusions plus IDE folders. Not ""**/.*"": that hides .zed/ (debug.json, tasks.json) and .editorconfig.
+                ""**/.git"",
+                ""**/.svn"",
+                ""**/.hg"",
+                ""**/.jj"",
+                ""**/.sl"",
+                ""**/.repo"",
+                ""**/CVS"",
+                ""**/.DS_Store"",
+                ""**/Thumbs.db"",
+                ""**/.classpath"",
+                ""**/.settings"",
+                ""**/.vs"",
+                ""**/.idea"",
+                ""**/.vscode"",
+                ""**/.utmp"",
                 ""**/*~"",
 
                 ""*.csproj"",
