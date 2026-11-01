@@ -1,8 +1,11 @@
 # Unity Zed Integration (UZI)
 
 A lightweight package to integrate the [Zed editor](https://zed.dev) as your external script editor in Unity.
+Works with the official Zed builds.
 
-> *Initially forked from [Unity-zed](https://github.com/maligan/unity-zed). Forked to add Windows support.*
+> *Forked from [SuperJura/unity-zed-integration](https://github.com/SuperJura/unity-zed-integration)
+> (which added Windows support to [Unity-zed](https://github.com/maligan/unity-zed)), adding a
+> Unity-aware namespace check. Package name: `com.notterox.unity-zed-integration`.*
 
 ---
 
@@ -24,8 +27,12 @@ You can install this package directly through the Unity Package Manager using th
 4. Paste the following link and click **Add**:
 
 ```text
-https://github.com/SuperJura/unity-zed-integration.git
+https://github.com/Notterox/unity-zed-integration.git
 ```
+
+Then pick **Zed** in **Preferences > External Tools**. The package finds Zed in its usual install
+folders and on `PATH`; if it isn't listed, check that Zed's `bin` folder is on the `PATH` Unity
+was started with.
 
 ---
 

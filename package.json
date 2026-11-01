@@ -1,19 +1,18 @@
 {
-  "name": "com.superjura.unity-zed-integration",
+  "name": "com.notterox.unity-zed-integration",
   "displayName": "Unity Zed Integration",
-  "description": "Unity Zed Integration",
-  "version": "0.9.0",
+  "description": "Zed editor integration for Unity: Zed as the external script editor, C# project generation, and a Unity-aware namespace check (UZI0001).",
+  "version": "0.10.0",
   "author": {
-     "name": "SuperJura",
-     "email": "jurica.adamek@gmail.com",
-     "url": "https://github.com/SuperJura"
+    "name": "Notterox",
+    "url": "https://github.com/Notterox"
   },
   "license": "MIT",
   "keywords": [
-      "zed",
-      "unity",
-      "editor",
-      "ide"
+    "zed",
+    "unity",
+    "editor",
+    "ide"
   ],
   "dependencies": {
     "com.unity.ide.visualstudio": "2.0.20"

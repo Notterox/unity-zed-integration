@@ -26,7 +26,7 @@ namespace UnityZedIntegration
 
             var newline = content.Contains("\r\n") ? "\r\n" : "\n";
             var addition = string.Join(newline,
-                "  <!-- Added by com.superjura.unity-zed-integration: namespace analyzer (UZI0001). -->",
+                "  <!-- Added by com.notterox.unity-zed-integration: namespace analyzer (UZI0001). -->",
                 "  <PropertyGroup>",
                 $"    <UnityZedNamespaceRoot>{SecurityElement.Escape(root)}</UnityZedNamespaceRoot>",
                 "    <NoWarn>$(NoWarn);IDE0130</NoWarn>",
