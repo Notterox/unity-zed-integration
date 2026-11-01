@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Roslyn analyzers the package adds to the C# projects Unity generates for the IDE (see
+    Editor/ZedProjectFiles.cs). Unity itself never loads this assembly: it lives in the
+    Analyzers~ folder, which Unity ignores. Build with Analyzers~/build.sh.
+  -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsRoslynComponent>true</IsRoslynComponent>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <!-- RS2008: release tracking is for analyzers published on NuGet. -->
+    <NoWarn>$(NoWarn);RS2008</NoWarn>
+    <!-- Roslyn hosts provide Microsoft.CodeAnalysis; nothing else is shipped. -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 4.8 is older than any Roslyn the IDE runs, so the analyzer loads everywhere. -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="UnityZedIntegration.Analyzers.Check" />
+  </ItemGroup>
+
+</Project>
